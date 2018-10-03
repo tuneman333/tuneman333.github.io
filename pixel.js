@@ -248,7 +248,7 @@ function brain(){
 			}
 			if(t==6){//water
 				if(num[1]+num[2]==3&&num[0]==0){ng[w][h]=1}//creates conways if no air
-				if(up==4){ng[w][h]=0}else{//sand kills water
+				if(up==4){ng[w][h]=0}else{//sand s water
 					if(down==0||down==3){ng[w][h]=0;}else{
 						if(waterWind>0){
 							if(right==0&&upRight!=6){ng[w][h]=0;}
@@ -385,11 +385,11 @@ function doPlayers(){
 		pl.grounded=0;//0=not grounded, 1=top,2=right,3=floor,4=left
 		
 		if(pl.type==0){//water guy
-			if(touched==7||touched==8||g[pl.gX][pl.gY+1]==7||g[pl.gX][pl.gY+1]==8){kill(pl);}//if you touch the fire you dead foo
+			//if(touched==7||touched==8||g[pl.gX][pl.gY+1]==7||g[pl.gX][pl.gY+1]==8){kill(pl);}//if you touch the fire you dead foo
 		}
 		if(pl.type==1){//fire guy
 			//if(touched==0){g[pl.gX][pl.gY]=7}//lights everythig on fire when you run
-			if(touched==6||g[pl.gX][pl.gY+1]==6){kill(pl);}//if you touch the wateryou dead foo
+			//if(touched==6||g[pl.gX][pl.gY+1]==6){kill(pl);}//if you touch the wateryou dead foo
 		}
 		
 		if(pl.ySpeed<0){//going up
